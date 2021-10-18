@@ -1,8 +1,11 @@
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 
 const NavSection = () => {
+  const { user, handleLogOut } = useAuth();
+
   return (
     <div>
       <Navbar
@@ -26,14 +29,18 @@ const NavSection = () => {
               Shop
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/login">
-              login
-            </Nav.Link>
-
-            <Button variant="light">Log Out</Button>
+            {!user.email ? (
+              <Nav.Link as={Link} to="/login">
+                login
+              </Nav.Link>
+            ) : (
+              <Button variant="light" onClick={handleLogOut}>
+                Log Out
+              </Button>
+            )}
 
             <Navbar.Text>
-              Signed in as: <a href="#login">kh</a>
+              Signed in as: <a href="#login">{user.displayName}</a>
             </Navbar.Text>
           </Navbar.Collapse>
           <Nav className="me-auto"></Nav>

@@ -26,7 +26,7 @@ function App() {
           <Route exact path="/about">
             <About></About>
           </Route>
-          <Route exact path="/details">
+          <Route exact path="/details/:serviceID">
             <Deatils></Deatils>
           </Route>
           <Route exact path="/Login">

@@ -29,10 +29,9 @@ const useFirbase = () => {
       }
     });
     return () => unsubscribe;
-  });
+  }, []);
 
-  const logOut = () => {
-    const auth = getAuth();
+  const handleLogOut = () => {
     signOut(auth).then(() => {
       setUser({});
     });
@@ -41,7 +40,7 @@ const useFirbase = () => {
   return {
     user,
     handleGoogleLogIn,
-    logOut,
+    handleLogOut,
   };
 };
 
