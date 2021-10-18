@@ -9,10 +9,11 @@ import NavSection from "./Pages/Home/NavSection/NavSection";
 import Login from "./Pages/Login/Login";
 import Shop from "./Pages/Shop/Shop";
 import NotFound from "./Pages/NotFound/NotFound";
+import AuthProvider from "./AuthProvider/AuthProvider";
 
 function App() {
   return (
-    <div className="App">
+    <AuthProvider>
       <Router>
         <NavSection></NavSection>
         <Switch>
@@ -40,7 +41,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 
