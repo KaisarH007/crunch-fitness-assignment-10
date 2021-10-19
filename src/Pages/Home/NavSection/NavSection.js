@@ -6,7 +6,7 @@ import logo from "../../../images/logo.png";
 
 const NavSection = () => {
   const { user, handleLogOut } = useAuth();
-  console.log(user);
+
   return (
     <div>
       <Navbar
@@ -33,7 +33,7 @@ const NavSection = () => {
               Shop
             </Nav.Link>
 
-            {!user.email ? (
+            {!user.displayName ? (
               <Nav.Link as={Link} to="/login">
                 Login
               </Nav.Link>

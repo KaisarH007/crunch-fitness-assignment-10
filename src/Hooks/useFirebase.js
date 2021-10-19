@@ -5,6 +5,8 @@ import {
   GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 
@@ -37,10 +39,24 @@ const useFirbase = () => {
     });
   };
 
+  const handleUserRegister = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password).then((result) => {
+      console.log(result.user);
+    });
+  };
+
+  const handleUserLogin = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password).then((result) => {
+      console.log(result.user);
+    });
+  };
+
   return {
     user,
     handleGoogleLogIn,
     handleLogOut,
+    handleUserRegister,
+    handleUserLogin,
   };
 };
 

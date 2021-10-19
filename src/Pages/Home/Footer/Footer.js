@@ -25,28 +25,15 @@ const Footer = () => {
             <small>{phoneIcon} +9714 3453033</small> <br />
             <small>{mailIcon} crunh_fitness@gmail.com</small> <br />
           </div>
-          <div className="col-md-2 text-center">
-            <h5>Company</h5>
-            <div className="text-muted">
-              <p>About</p>
-              <p>Coursesy</p>
-              <p>Events</p>
-              <p>Instructor</p>
-              <p>Career</p>
-              <p>Become a Teacher</p>
-            </div>
+          <div className="col-md-4 text-center">
+            <img
+              className="rounded"
+              style={{ width: "100%" }}
+              src="https://i.pinimg.com/originals/65/29/a7/6529a74c68df9e3fbe26892cffd19862.jpg"
+              alt=""
+            />
           </div>
-          <div className="col-md-2 text-center">
-            <h5>Platform</h5>
-            <div className="text-muted">
-              <p>Browse Library</p>
-              <p>Library</p>
-              <p>Partners</p>
-              <p>News & Blogs</p>
-              <p>FAQs</p>
-              <p>Tutorials</p>
-            </div>
-          </div>
+
           <div className="col-md-4">
             <h4 className="text-center">Subscrib</h4>
             <input
