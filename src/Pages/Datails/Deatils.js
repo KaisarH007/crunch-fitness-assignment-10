@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
 import { useParams } from "react-router";
+import "./Details.css";
 
 const Deatils = () => {
   const { serviceID } = useParams();
@@ -21,16 +21,18 @@ const Deatils = () => {
   }, [serviceDetails]);
 
   return (
-    <div className="home-bg">
-      <Card>
-        <Card.Img variant="top" src={singleService?.photo} />
-        <Card.Body>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+    <div className="detail-container container mt-5">
+      <div className="row">
+        <div className="col-md-6">
+          <img className="img-fluid" src={singleService?.photo} alt="" />
+        </div>
+        <div className="col-md-6">
+          <h3>{singleService?.title}</h3>
+          <p>{singleService?.description}</p>
+          <h4>Monthly price $ {singleService?.priceM}</h4>
+          <h4>Yearly price $ {singleService?.priceY}</h4>
+        </div>
+      </div>
     </div>
   );
 };
