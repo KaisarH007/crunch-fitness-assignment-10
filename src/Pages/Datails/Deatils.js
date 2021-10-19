@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
 import { useParams } from "react-router";
 
 const Deatils = () => {
@@ -7,7 +8,7 @@ const Deatils = () => {
   const [singleService, setSingleService] = useState({});
 
   useEffect(() => {
-    fetch("serviceDetails.json")
+    fetch("/serviceDetails.json")
       .then((response) => response.json())
       .then((data) => setServiceDetails(data));
   }, []);
@@ -16,12 +17,20 @@ const Deatils = () => {
     const foundServive = serviceDetails.find(
       (service) => service.id === serviceID
     );
-    console.log(foundServive);
+    setSingleService(foundServive);
   }, [serviceDetails]);
 
   return (
-    <div>
-      <h1>This is Details Page {serviceID}</h1>
+    <div className="home-bg">
+      <Card>
+        <Card.Img variant="top" src={singleService?.photo} />
+        <Card.Body>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </div>
   );
 };
