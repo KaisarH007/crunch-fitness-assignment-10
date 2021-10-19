@@ -21,16 +21,18 @@ const Deatils = () => {
   }, [serviceDetails]);
 
   return (
-    <div className="detail-container container mt-5">
-      <div className="row">
-        <div className="col-md-6">
-          <img className="img-fluid" src={singleService?.photo} alt="" />
-        </div>
-        <div className="col-md-6">
-          <h3>{singleService?.title}</h3>
-          <p>{singleService?.description}</p>
-          <h4>Monthly price $ {singleService?.priceM}</h4>
-          <h4>Yearly price $ {singleService?.priceY}</h4>
+    <div className="home-bg p-5 text-white">
+      <div className="detail-container container ">
+        <div className="row">
+          <div className="col-md-6">
+            <img className="img-fluid" src={singleService?.photo} alt="" />
+          </div>
+          <div className="col-md-6">
+            <h1>{singleService?.title}</h1>
+            <p>{singleService?.description}</p>
+            <h5>Monthly price: ${singleService?.priceM}</h5>
+            <h5>Yearly price: ${singleService?.priceY}</h5>
+          </div>
         </div>
       </div>
     </div>
