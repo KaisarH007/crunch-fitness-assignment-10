@@ -17,8 +17,9 @@ const NavSection = () => {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand href="#home">
-            <img style={{ width: "100px" }} src={logo} alt="" /> Crunch Fitness
+          <Navbar.Brand className="d-flex" href="#home">
+            <img style={{ width: "100px" }} src={logo} alt="" />{" "}
+            <h4 className="fw-bold mt-2"> Crunch Fitness</h4>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end fs-5 fw-bold">
@@ -26,7 +27,7 @@ const NavSection = () => {
               Home
             </Nav.Link>
             <Nav.Link as={Link} to="/about">
-              about
+              About
             </Nav.Link>
             <Nav.Link as={Link} to="/shop">
               Shop
@@ -34,7 +35,7 @@ const NavSection = () => {
 
             {!user.email ? (
               <Nav.Link as={Link} to="/login">
-                login
+                Login
               </Nav.Link>
             ) : (
               <Button className="m-2" variant="light" onClick={handleLogOut}>
