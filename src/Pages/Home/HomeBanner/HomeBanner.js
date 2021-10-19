@@ -16,7 +16,7 @@ const HomeBanner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h1>Let's Crunch Agin</h1>
+            <h1 className="title-styel">Let's Crunch Agin</h1>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -29,7 +29,7 @@ const HomeBanner = () => {
           />
 
           <Carousel.Caption>
-            <h1>Our Gym is Your Gym</h1>
+            <h1 className="title-styel">Our Gym is Your Gym</h1>
             <p>
               Kick your feet up! With a gym designed around you, we think you’ll
               love it here.
@@ -45,7 +45,7 @@ const HomeBanner = () => {
           />
 
           <Carousel.Caption>
-            <h1>Energy is for Everyone</h1>
+            <h1 className="title-styel">Energy is for Everyone</h1>
             <p>Believe in the power of a motivating group fitness community.</p>
           </Carousel.Caption>
         </Carousel.Item>
