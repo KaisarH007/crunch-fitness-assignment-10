@@ -4,12 +4,16 @@ import useAuth from "../../Hooks/useAuth";
 import loginLogo from "../../images/login-logo.png";
 
 const Login = () => {
-  const { user, handleGoogleLogIn, handleUserRegister, handleUserLogin } =
-    useAuth();
+  const {
+    handleGoogleLogIn,
+    handleUserRegister,
+    handleUserLogin,
+    setUserName,
+  } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogIn, setIsLogIn] = useState(false);
-  // const [name, setName] = useState("");
+  const [name, setName] = useState("");
 
   const toggleLogin = (e) => {
     setIsLogIn(e.target.checked);
@@ -22,12 +26,13 @@ const Login = () => {
   const hanldePassword = (e) => {
     setPassword(e.target.value);
   };
-  // const hanldeName = (e) => {
-  //   setName(e.target.value);
-  // };
+  const hanldeName = (e) => {
+    setName(e.target.value);
+  };
 
   const handleRegister = () => {
     handleUserRegister(email, password);
+    setUserName(name);
   };
   const handleLogin = () => {
     handleUserLogin(email, password);
@@ -39,12 +44,18 @@ const Login = () => {
         <div className="row">
           <div className="col-md-6 mt-5 text-center">
             <h3>Please {isLogIn ? "Login" : "Register"}</h3>
-            <input
-              type="text"
-              name="name"
-              id=""
-              placeholder="Name"
-            /> <br /> <br />
+            {!isLogIn && (
+              <div>
+                <input
+                  onBlur={hanldeName}
+                  type="text"
+                  name="name"
+                  id=""
+                  placeholder="Name"
+                />
+              </div>
+            )}
+            <br />
             <div>
               <input
                 onBlur={handleEmail}
