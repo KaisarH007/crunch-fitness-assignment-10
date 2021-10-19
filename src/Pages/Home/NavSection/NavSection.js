@@ -1,12 +1,12 @@
 import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Image, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import logo from "../../../images/logo.png";
 
 const NavSection = () => {
   const { user, handleLogOut } = useAuth();
-
+  console.log(user);
   return (
     <div>
       <Navbar
@@ -38,13 +38,18 @@ const NavSection = () => {
                 Login
               </Nav.Link>
             ) : (
-              <Button className="m-2" variant="light" onClick={handleLogOut}>
+              <Button className="m-2" variant="danger" onClick={handleLogOut}>
                 Log Out
               </Button>
             )}
 
             <Navbar.Text>
-              Signed in as: <a href="#login">{user.displayName}</a>
+              <span className="text-white mx-2">{user.displayName}</span>
+              <Image
+                style={{ width: "40px" }}
+                src={user?.photoURL}
+                roundedCircle
+              />
             </Navbar.Text>
           </Navbar.Collapse>
           <Nav className="me-auto"></Nav>

@@ -10,6 +10,7 @@ import Login from "./Pages/Login/Login";
 import Shop from "./Pages/Shop/Shop";
 import NotFound from "./Pages/NotFound/NotFound";
 import AuthProvider from "./AuthProvider/AuthProvider";
+import PrivateRoute from "./Pages/Private/PrivateRoute";
 
 function App() {
   return (
@@ -26,9 +27,9 @@ function App() {
           <Route exact path="/about">
             <About></About>
           </Route>
-          <Route exact path="/details/:serviceID">
+          <PrivateRoute exact path="/details/:serviceID">
             <Deatils></Deatils>
-          </Route>
+          </PrivateRoute>
           <Route exact path="/Login">
             <Login></Login>
           </Route>
