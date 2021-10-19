@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import logo from "../../../images/logo.png";
 
 const NavSection = () => {
   const { user, handleLogOut } = useAuth();
@@ -16,9 +17,11 @@ const NavSection = () => {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand href="#home">Hamid Gym</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img style={{ width: "100px" }} src={logo} alt="" /> Crunch Fitness
+          </Navbar.Brand>
           <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
+          <Navbar.Collapse className="justify-content-end fs-5 fw-bold">
             <Nav.Link as={Link} to="/home">
               Home
             </Nav.Link>
@@ -34,7 +37,7 @@ const NavSection = () => {
                 login
               </Nav.Link>
             ) : (
-              <Button variant="light" onClick={handleLogOut}>
+              <Button className="m-2" variant="light" onClick={handleLogOut}>
                 Log Out
               </Button>
             )}

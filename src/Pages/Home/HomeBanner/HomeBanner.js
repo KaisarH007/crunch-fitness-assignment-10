@@ -9,28 +9,44 @@ const HomeBanner = () => {
     <>
       <Carousel>
         <Carousel.Item>
-          <img className="d-block w-100 " src={banner1} alt="First slide" />
+          <img
+            className="d-block w-100 "
+            style={{ height: "70vh" }}
+            src={banner1}
+            alt="First slide"
+          />
           <Carousel.Caption>
-            <h3>First slide label</h3>
+            <h1>Let's Crunch Agin</h1>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={banner2} alt="Second slide" />
+          <img
+            className="d-block w-100"
+            style={{ height: "70vh" }}
+            src={banner2}
+            alt="Second slide"
+          />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1>Our Gym is Your Gym</h1>
+            <p>
+              Kick your feet up! With a gym designed around you, we think you’ll
+              love it here.
+            </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={banner3} alt="Third slide" />
+          <img
+            className="d-block w-100"
+            style={{ height: "70vh" }}
+            src={banner3}
+            alt="Third slide"
+          />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h1>Energy is for Everyone</h1>
+            <p>Believe in the power of a motivating group fitness community.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
