@@ -29,7 +29,7 @@ const Footer = () => {
             <img
               className="rounded"
               style={{ width: "100%" }}
-              src="https://i.pinimg.com/originals/65/29/a7/6529a74c68df9e3fbe26892cffd19862.jpg"
+              src="https://i.dlpng.com/static/png/6885295_preview.png"
               alt=""
             />
           </div>
