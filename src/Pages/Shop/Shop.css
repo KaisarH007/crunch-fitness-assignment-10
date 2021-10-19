@@ -1,0 +1,11 @@
+.shop-banner {
+  background-image: url("https://www.elitefts.com/media/catalog/category/Category_Banner_Template-homegym.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.title-styel {
+  font-size: 50px;
+  font-weight: 900;
+}
