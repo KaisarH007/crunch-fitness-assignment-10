@@ -30,8 +30,8 @@ const Login = () => {
   };
 
   const handleRegister = () => {
-    handleUserRegister(email, password);
-    setUserName();
+    handleUserRegister(name, email, password);
+    //setUserName(name);
   };
   const handleLogin = () => {
     handleUserLogin(email, password);

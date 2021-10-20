@@ -42,10 +42,10 @@ const useFirbase = () => {
     });
   };
 
-  const handleUserRegister = (email, password) => {
+  const handleUserRegister = (name, email, password) => {
     createUserWithEmailAndPassword(auth, email, password).then((result) => {
       setUser(result.user);
-      setUserName();
+      setUserName(name);
     });
   };
 
