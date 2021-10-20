@@ -43,6 +43,7 @@ const Shop = () => {
             <img style={{ width: "100%" }} src={product1} alt="" />
           </div>
         </div>
+        <hr />
         <div className="row">
           <div className="col-md-6">
             <img style={{ width: "100%" }} src={product2} alt="" />
@@ -71,6 +72,7 @@ const Shop = () => {
             </div>
           </div>
         </div>
+        <hr />
         <div className="row ">
           <div className="col-md-6  d-flex align-items-center justify-content-center">
             <div>
@@ -100,6 +102,7 @@ const Shop = () => {
             <img style={{ width: "100%" }} src={product3} alt="" />
           </div>
         </div>
+        <hr />
         <div className="row">
           <div className="col-md-6">
             <img style={{ width: "100%" }} src={product4} alt="" />

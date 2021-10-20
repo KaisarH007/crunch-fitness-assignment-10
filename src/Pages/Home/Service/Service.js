@@ -8,7 +8,10 @@ const Service = ({ service }) => {
   return (
     <div>
       <Col>
-        <Card style={{ height: "400px" }} className="card-hover card h-100">
+        <Card
+          style={{ height: "400px" }}
+          className="card-hover home-bg text-white card h-100"
+        >
           <Card.Img variant="top" style={{ height: "250px" }} src={photo} />
           <Card.Body>
             <Card.Title>{title}</Card.Title>

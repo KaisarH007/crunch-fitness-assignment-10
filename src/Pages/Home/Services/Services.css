@@ -3,6 +3,10 @@
 }
 
 .card-hover {
-  /* border: 2px solid rgb(140, 0, 255); */
-  box-shadow: 5px 5px 10px rgb(91, 92, 92);
+  box-shadow: 5px 5px 10px rgb(22, 22, 22);
+}
+
+.card-hover:hover {
+  background-color: rgb(15, 5, 17);
+  border: 2px solid rgb(247, 237, 255);
 }
