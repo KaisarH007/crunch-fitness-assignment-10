@@ -46,12 +46,14 @@ const useFirbase = () => {
     createUserWithEmailAndPassword(auth, email, password).then((result) => {
       setUser(result.user);
       setUserName(name);
+      window.location.reload();
     });
   };
 
   const handleUserLogin = (email, password) => {
     signInWithEmailAndPassword(auth, email, password).then((result) => {
       setUser(result.user);
+      window.location.reload();
     });
   };
   const setUserName = (name) => {

@@ -3,12 +3,7 @@ import { Button } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
-  const {
-    handleGoogleLogIn,
-    handleUserRegister,
-    handleUserLogin,
-    setUserName,
-  } = useAuth();
+  const { handleGoogleLogIn, handleUserRegister, handleUserLogin } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogIn, setIsLogIn] = useState(false);
@@ -31,7 +26,6 @@ const Login = () => {
 
   const handleRegister = () => {
     handleUserRegister(name, email, password);
-    //setUserName(name);
   };
   const handleLogin = () => {
     handleUserLogin(email, password);
