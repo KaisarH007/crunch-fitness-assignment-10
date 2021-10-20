@@ -4,6 +4,7 @@ import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../../images/logo.png";
+import payphoto from "../../../images/payment-method.jpg";
 const phoneIcon = <FontAwesomeIcon icon={faPhone} />;
 const mailIcon = <FontAwesomeIcon icon={faMailBulk} />;
 
@@ -29,7 +30,7 @@ const Footer = () => {
             <img
               className="rounded"
               style={{ width: "100%" }}
-              src="https://i.dlpng.com/static/png/6885295_preview.png"
+              src={payphoto}
               alt=""
             />
           </div>

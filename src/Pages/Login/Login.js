@@ -39,10 +39,10 @@ const Login = () => {
   };
 
   return (
-    <div className="home-bg text-white  d-flex align-items-center justify-content-center py-5">
+    <div className=" text-white home-bg d-flex align-items-center justify-content-center py-5">
       <div className="container">
-        <div className="row">
-          <div className="col-md-6 mt-5 text-center">
+        <div className="card bg-dark p-4 home-bg">
+          <div className=" text-center">
             <h3>Please {isLogIn ? "Login" : "Register"}</h3>
             {!isLogIn && (
               <div>
@@ -50,7 +50,7 @@ const Login = () => {
                   onBlur={hanldeName}
                   type="text"
                   name="name"
-                  id=""
+                  id="userName"
                   placeholder="Name"
                 />
               </div>
@@ -61,7 +61,7 @@ const Login = () => {
                 onBlur={handleEmail}
                 type="email"
                 name="email"
-                id=""
+                id="userEmail"
                 placeholder="Email"
               />{" "}
               <br /> <br />
@@ -69,7 +69,7 @@ const Login = () => {
                 onBlur={hanldePassword}
                 type="password"
                 name="password"
-                id=""
+                id="userPassword"
                 placeholder="Password"
               />
             </div>
@@ -104,9 +104,6 @@ const Login = () => {
             >
               Google Sign In
             </Button>
-          </div>
-          <div className="col-md-6">
-            <img style={{ width: "100%" }} src={loginLogo} alt="" />
           </div>
         </div>
       </div>

@@ -45,6 +45,7 @@ const useFirbase = () => {
   const handleUserRegister = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password).then((result) => {
       setUser(result.user);
+      setUserName();
     });
   };
 
@@ -56,6 +57,7 @@ const useFirbase = () => {
   const setUserName = (name) => {
     updateProfile(auth.currentUser, { displayName: name }).then((result) => {});
   };
+
   return {
     user,
     handleGoogleLogIn,
