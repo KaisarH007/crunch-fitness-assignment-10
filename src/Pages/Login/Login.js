@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
-
+import logo from "../../images/Google__G__Logo.svg.png";
+import logo2 from "../../images/loging.png";
 const Login = () => {
   const { handleGoogleLogIn, handleUserRegister, handleUserLogin } = useAuth();
   const [email, setEmail] = useState("");
@@ -77,17 +78,18 @@ const Login = () => {
                   <Button
                     className="px-4 fw-bold"
                     onClick={handleRegister}
-                    variant="primary"
+                    variant="dark"
                   >
+                    <img style={{ width: "50px" }} src={logo2} alt="" />{" "}
                     Register
                   </Button>
                 ) : (
                   <Button
-                    className="m-3 px-4 fw-bold"
+                    className=" fw-bold text-white"
                     onClick={handleLogin}
-                    variant="warning"
+                    variant="dark"
                   >
-                    Login
+                    <img style={{ width: "50px" }} src={logo2} alt="" /> Login
                   </Button>
                 )}
                 <br /> <br />
@@ -95,9 +97,10 @@ const Login = () => {
                 <Button
                   className="px-4 fw-bold"
                   onClick={handleGoogleLogIn}
-                  variant="success"
+                  variant="dark"
                 >
-                  Google Sign In
+                  <img style={{ width: "30px" }} src={logo} alt="" /> Sign In
+                  With Google Account
                 </Button>
               </div>
             </div>
