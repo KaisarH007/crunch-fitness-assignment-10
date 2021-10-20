@@ -21,11 +21,11 @@ const Deatils = () => {
   }, [serviceDetails]);
 
   return (
-    <div className="home-bg p-5 text-white">
+    <div className="home-bg py-5 text-white">
       <div className="detail-container container ">
         <div className="row">
           <div className="col-md-6">
-            <img className="img-fluid" src={singleService?.photo} alt="" />
+            <img style={{ width: "100%" }} src={singleService?.photo} alt="" />
           </div>
           <div className="col-md-6">
             <h1>{singleService?.title}</h1>
