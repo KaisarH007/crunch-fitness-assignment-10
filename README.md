@@ -10,11 +10,11 @@ This is a Gym Services Web App
   account.
 - Service Details are protected, user need sign up for seeing service details.
 
-* this is a Demo Gym Web site
+* This is a Demo Gym Web site
 
-* I implement react private route
+* I implemented react private route
 
-* User can log in with google account or manual login.
+* User can sign up with google account or register with email password.
 
 ### Technology used:
 
