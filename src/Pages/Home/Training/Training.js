@@ -5,19 +5,21 @@ const Training = () => {
     <div className="home-bg text-white">
       <div className="container">
         <div className="row p-4">
-          <div className="col-md-6  d-flex align-items-center justify-content-center">
+          <div className="col-md-6 fw-bold d-flex align-items-center justify-content-center">
             <div>
-              <h2>It’s One-on-Wonderful</h2>
+              <div>
+                <h2>It’s One-on-Wonderful</h2>
 
-              <p>
-                Here at Crunch, we focus on bringing you the most powerful
-                workouts to meet your needs: our toolbox includes weighted
-                battle ropes, kettlebells, TRX® suspension straps, MMA
-                equipment, Bulgarian Bags, and the list goes on. It may sound
-                like a mouthful, but this world-class functional training
-                equipment helps our trainers provide you with an array of High
-                Intensity Interval Training (HIIT) workouts.
-              </p>
+                <p>
+                  Here at Crunch, we focus on bringing you the most powerful
+                  workouts to meet your needs: our toolbox includes weighted
+                  battle ropes, kettlebells, TRX® suspension straps, MMA
+                  equipment, Bulgarian Bags, and the list goes on. It may sound
+                  like a mouthful, but this world-class functional training
+                  equipment helps our trainers provide you with an array of High
+                  Intensity Interval Training (HIIT) workouts.
+                </p>
+              </div>
             </div>
           </div>
 
