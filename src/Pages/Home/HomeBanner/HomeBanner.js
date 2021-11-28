@@ -11,19 +11,19 @@ const HomeBanner = () => {
         <Carousel.Item>
           <img
             className="d-block w-100 "
-            style={{ height: "350px" }}
+            style={{ height: "370px" }}
             src={banner1}
             alt="First slide"
           />
           <Carousel.Caption>
-            <h1 className="title-styel">Let's Crunch Agin</h1>
+            <h1 className="title-styel">Let's Crunch Again</h1>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            style={{ height: "350px" }}
+            style={{ height: "370px" }}
             src={banner2}
             alt="Second slide"
           />
@@ -39,7 +39,7 @@ const HomeBanner = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            style={{ height: "350px" }}
+            style={{ height: "370px" }}
             src={banner3}
             alt="Third slide"
           />
